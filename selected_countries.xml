@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#b8dee6" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">-29.5312,-48.4584,63.2812,44.0876</Parameter>
+  <Parameter name="center">19.248,7.8851,4</Parameter>
+  <Parameter name="format">png8</Parameter>
+  <Parameter name="minzoom">4</Parameter>
+  <Parameter name="maxzoom">8</Parameter>
+  <Parameter name="scale">1.6</Parameter>
+  <Parameter name="metatile">1</Parameter>
+  <Parameter name="id"><![CDATA[selected_countries]]></Parameter>
+  <Parameter name="_updated">1423572311000</Parameter>
+  <Parameter name="name"><![CDATA[Selected Countries]]></Parameter>
+  <Parameter name="tilejson"><![CDATA[2.0.0]]></Parameter>
+  <Parameter name="scheme"><![CDATA[xyz]]></Parameter>
+</Parameters>
+
+
+<Style name="countries" filter-mode="first">
+  <Rule>
+    <Filter>([SOV_A3] = 'COG')</Filter>
+    <PolygonSymbolizer fill="#bbbbbb" />
+  </Rule>
+  <Rule>
+    <Filter>([SOV_A3] = 'NER')</Filter>
+    <PolygonSymbolizer fill="#bbbbbb" />
+  </Rule>
+  <Rule>
+    <Filter>([SOV_A3] = 'AGO')</Filter>
+    <PolygonSymbolizer fill="#bbbbbb" />
+  </Rule>
+  <Rule>
+    <PolygonSymbolizer fill="#ffffff" />
+  </Rule>
+</Style>
+<Style name="countries-outline" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke="#85c5d3" stroke-width="2" stroke-linejoin="round" />
+  </Rule>
+</Style>
+<Layer name="countries"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>countries-outline</StyleName>
+    <StyleName>countries</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/antoviaque/Documents/MapBox/project/selected_countries/layers/countries/82945364-10m-admin-0-countries.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+       <Parameter name="id"><![CDATA[countries]]></Parameter>
+       <Parameter name="project"><![CDATA[selected_countries]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
